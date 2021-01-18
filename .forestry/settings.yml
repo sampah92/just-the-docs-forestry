@@ -4,11 +4,9 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
-- type: directory
-  path: ''
-  label: coba
-  create: all
-  match: "**/*"
+- type: document
+  path: index.md
+  label: Home
 - type: directory
   path: docs
   label: Docs
@@ -17,12 +15,14 @@ sections:
   templates:
   - page
 - type: document
-  path: index.md
-  label: Home
-- type: document
   path: README.md
   label: README
   read_only: true
+- type: directory
+  path: ''
+  label: coba
+  create: all
+  match: "**/*"
 upload_dir: assets/images
 public_path: "/assets/images"
 front_matter_path: ''
